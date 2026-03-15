@@ -113,8 +113,9 @@ const App: React.FC = () => {
           </button>
         </div>
 
-        <footer className="mt-16 text-neutral-600 text-xs uppercase tracking-widest">
-          Inspirado en el juego chileno Mala Leche
+        <footer className="mt-16 text-neutral-600 text-[10px] uppercase tracking-[0.2em] flex flex-col items-center gap-2">
+          <span>Inspirado en el juego chileno Mala Leche</span>
+          <span className="opacity-50">Creado por: Christian Núñez V., 2026</span>
         </footer>
       </div>
     );
@@ -365,6 +366,9 @@ const App: React.FC = () => {
           </div>
         )}
       </main>
+      <footer className="fixed bottom-4 right-4 text-neutral-600 text-[10px] uppercase tracking-widest z-[60] pointer-events-none opacity-40">
+          Creado por: Christian Núñez V., 2026
+      </footer>
       <style>{`
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

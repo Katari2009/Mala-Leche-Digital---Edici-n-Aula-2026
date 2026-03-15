@@ -96,6 +96,9 @@ const App: React.FC = () => {
             </div>
           </button>
         </div>
+        <footer className="mt-12 text-neutral-600 text-[10px] uppercase tracking-[0.2em] flex flex-col items-center gap-2">
+          <span className="opacity-50">Creado por: Christian Núñez V., 2026</span>
+        </footer>
       </div>
     );
   }
@@ -261,8 +264,53 @@ const App: React.FC = () => {
           </div>
         )}
 
-        {/* Tutorial Modal */}
         {showTutorial && (
-          <div className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4">
-            <div className="bg-neutral-900 border border-neutral-800 p-8 rounded-3xl max-w-lg w-full">
-              <h2 className="text
+          <div className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4">
+            <div className="bg-neutral-900 border border-neutral-800 p-10 rounded-[2.5rem] max-w-lg w-full shadow-2xl shadow-yellow-500/5 animate-in zoom-in duration-300">
+              <div className="text-center mb-8">
+                <h2 className="text-5xl font-bebas text-white mb-2 tracking-tight">CÓMO JUGAR</h2>
+                <div className="h-1 w-20 bg-yellow-500 mx-auto rounded-full" />
+              </div>
+              
+              <div className="space-y-8 mb-12">
+                <div className="flex gap-5">
+                  <div className="flex-shrink-0 w-10 h-10 bg-neutral-800 rounded-2xl flex items-center justify-center font-bebas text-2xl text-yellow-500">1</div>
+                  <div>
+                    <h4 className="font-bold text-sm uppercase tracking-widest text-white mb-1">Reparto</h4>
+                    <p className="text-neutral-400 text-sm leading-relaxed">Recibes 10 cartas negras y 5.000 LUCAS iniciales. El Dealer revela la carta blanca con una situación.</p>
+                  </div>
+                </div>
+                <div className="flex gap-5">
+                  <div className="flex-shrink-0 w-10 h-10 bg-neutral-800 rounded-2xl flex items-center justify-center font-bebas text-2xl text-yellow-500">2</div>
+                  <div>
+                    <h4 className="font-bold text-sm uppercase tracking-widest text-white mb-1">La Jugada</h4>
+                    <p className="text-neutral-400 text-sm leading-relaxed">Elige tu mejor carta negra para completar la frase. ¡Sé creativo, cruel o simplemente ordinario!</p>
+                  </div>
+                </div>
+                <div className="flex gap-5">
+                  <div className="flex-shrink-0 w-10 h-10 bg-neutral-800 rounded-2xl flex items-center justify-center font-bebas text-2xl text-yellow-500">3</div>
+                  <div>
+                    <h4 className="font-bold text-sm uppercase tracking-widest text-white mb-1">El Veredicto</h4>
+                    <p className="text-neutral-400 text-sm leading-relaxed">El Dealer elige la mejor (gana el pozo) y la peor (paga multa de 1 Luca al ganador). El rol de Dealer rota cada ronda.</p>
+                  </div>
+                </div>
+              </div>
+
+              <button 
+                onClick={() => setShowTutorial(false)}
+                className="w-full py-5 bg-white text-black font-bebas text-3xl rounded-2xl hover:bg-yellow-400 transition-colors shadow-xl"
+              >
+                ¡VAMOS ALLÁ!
+              </button>
+            </div>
+          </div>
+        )}
+      </main>
+      <footer className="fixed bottom-4 right-4 text-neutral-600 text-[10px] uppercase tracking-widest z-[60] pointer-events-none opacity-40">
+          Creado por: Christian Núñez V., 2026
+      </footer>
+    </div>
+  );
+};
+
+export default App;
